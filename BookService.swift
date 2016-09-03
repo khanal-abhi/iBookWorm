@@ -59,8 +59,27 @@ class BookService {
             updatedBook.author = book.author;
             updatedBook.genre = book.genre;
             updatedBook.year = book.year;
+            
+            return updatedBook;
         }
         return nil;
+    }
+    
+    func delete(book:Book) -> Bool {
+        if let bookToBeDeleted = self.getById(book.objectID) {
+            context.deleteObject(bookToBeDeleted);
+            return true;
+        }
+        
+        return false;
+    }
+    
+    func commit(){
+        do {
+            try context.save();
+        } catch let error as NSError {
+            print(error);
+        }
     }
     
 }
