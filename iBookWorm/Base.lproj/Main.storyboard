@@ -62,11 +62,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TD6-A1-FPf">
-                        <barButtonItem key="rightBarButtonItem" title="Add Book &gt;" id="RRY-4a-mHd"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Book" id="RRY-4a-mHd"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="gwE-In-Il6" id="h4F-Vk-3gd"/>
-                        <segue destination="zAB-Gj-Sau" kind="show" identifier="BookDetailSegue" action="showDetailViewController:sender:" id="kta-Uh-uvy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,7 +75,7 @@
         <!--Detail View Controller-->
         <scene sceneID="Egx-Ex-Qec">
             <objects>
-                <viewController id="zAB-Gj-Sau" customClass="DetailViewController" customModule="iBookWorm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="zAB-Gj-Sau" customClass="DetailViewController" customModule="iBookWorm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n8e-gB-Zrx"/>
                         <viewControllerLayoutGuide type="bottom" id="ynn-kR-BCN"/>
@@ -85,29 +84,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VPx-oX-cbN">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VPx-oX-cbN">
+                                <rect key="frame" x="20" y="64" width="560" height="580"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMf-8t-Qd6">
-                                        <rect key="frame" x="248" y="0.0" width="65" height="134"/>
+                                        <rect key="frame" x="248" y="0.0" width="65" height="145"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhb-jm-QaO">
-                                        <rect key="frame" x="241" y="134" width="78" height="134"/>
+                                        <rect key="frame" x="241" y="145" width="78" height="145"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre:" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zo5-ho-5eu">
-                                        <rect key="frame" x="245" y="268" width="71" height="134"/>
+                                        <rect key="frame" x="245" y="290" width="71" height="145"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Year of Publication:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cC8-aB-e0E">
-                                        <rect key="frame" x="190" y="402" width="181" height="134"/>
+                                        <rect key="frame" x="190" y="435" width="181" height="145"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>

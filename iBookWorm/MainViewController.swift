@@ -18,6 +18,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var currentBook:Book?;
     
     let bookDetailSegueIdentifier = "BookDetailSegue";
+    let detailViewControllerIdentifier = "DetailViewController";
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -65,16 +66,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         self.currentBook = books[indexPath.row];
-        self.performSegueWithIdentifier(bookDetailSegueIdentifier, sender: self);
+        let detailViewController = self.storyboard?.instantiateViewControllerWithIdentifier(detailViewControllerIdentifier) as! DetailViewController;
         
+        detailViewController.book = currentBook;
+        self.navigationController?.pushViewController(detailViewController, animated: true);
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == bookDetailSegueIdentifier) {
-            let detailViewController = segue.destinationViewController as! DetailViewController;
-            detailViewController.book = currentBook!;
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if(segue.identifier == bookDetailSegueIdentifier) {
+//            let detailViewController = segue.destinationViewController as! DetailViewController;
+//            detailViewController.book = currentBook!;
+//        }
+//    }
     
     func checkForFirstRun(){
         let preferences = NSUserDefaults.standardUserDefaults();
