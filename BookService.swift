@@ -1,0 +1,66 @@
+//
+//  BookService.swift
+//  iBookWorm
+//
+//  Created by Abhinash Khanal on 9/2/16.
+//  Copyright © 2016 KHANALCO. All rights reserved.
+//
+
+import Foundation
+import CoreData
+
+class BookService {
+    
+    var context:NSManagedObjectContext;
+    
+    init(context:NSManagedObjectContext){
+        self.context = context;
+    }
+    
+    func insert(title:String, author:String, genre:String, year:Int) -> Book {
+        let book = NSEntityDescription.insertNewObjectForEntityForName(Book.entityName, inManagedObjectContext: context) as! Book;
+        book.title = title;
+        book.author = author;
+        book.genre = genre;
+        book.year = year;
+        
+        return book;
+    }
+    
+    func getById(id:NSManagedObjectID) -> Book? {
+        do {
+            let book = try context.existingObjectWithID(id) as! Book;
+            return book;
+        } catch let error as NSError {
+            print(error);
+            return nil;
+        }
+    }
+    
+    func get(withPredicate queryPredicate:NSPredicate) -> [Book] {
+        let fetchRequest = NSFetchRequest(entityName: Book.entityName);
+        fetchRequest.predicate = queryPredicate;
+        do {
+            let result = try context.executeFetchRequest(fetchRequest) as! [Book];
+            return result;
+        } catch let error as NSError {
+            print(error);
+            return [];
+        }
+    }
+    
+    func getAll() -> [Book] {
+        return self.get(withPredicate: NSPredicate(value: true));
+    }
+    
+    func update(book:Book) -> Book? {
+        if let updatedBook = self.getById(book.objectID) {
+            updatedBook.title = book.title;
+            updatedBook.author = book.author;
+            updatedBook.genre = book.genre;
+            updatedBook.year = book.year;
+        }
+        return nil;
+    }
+    
+}

@@ -8,13 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		38E317A01D7A4F3400F33AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3179F1D7A4F3400F33AE7 /* AppDelegate.swift */; };
-		38E317A21D7A4F3400F33AE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317A11D7A4F3400F33AE7 /* ViewController.swift */; };
 		38E317A51D7A4F3400F33AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E317A31D7A4F3400F33AE7 /* Main.storyboard */; };
 		38E317A81D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38E317A61D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld */; };
 		38E317AA1D7A4F3400F33AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E317A91D7A4F3400F33AE7 /* Assets.xcassets */; };
 		38E317AD1D7A4F3400F33AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E317AB1D7A4F3400F33AE7 /* LaunchScreen.storyboard */; };
 		38E317B81D7A4F3400F33AE7 /* iBookWormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317B71D7A4F3400F33AE7 /* iBookWormTests.swift */; };
 		38E317C31D7A4F3400F33AE7 /* iBookWormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317C21D7A4F3400F33AE7 /* iBookWormUITests.swift */; };
+		38E317D21D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317D01D7A4FD300F33AE7 /* Book+CoreDataProperties.swift */; };
+		38E317D31D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317D01D7A4FD300F33AE7 /* Book+CoreDataProperties.swift */; };
+		38E317D41D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317D01D7A4FD300F33AE7 /* Book+CoreDataProperties.swift */; };
+		38E317D51D7A4FD300F33AE7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317D11D7A4FD300F33AE7 /* Book.swift */; };
+		38E317D61D7A4FD300F33AE7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317D11D7A4FD300F33AE7 /* Book.swift */; };
+		38E317D71D7A4FD300F33AE7 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317D11D7A4FD300F33AE7 /* Book.swift */; };
+		38E317D91D7A500400F33AE7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317D81D7A500400F33AE7 /* MainViewController.swift */; };
+		38E317DA1D7A500400F33AE7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317D81D7A500400F33AE7 /* MainViewController.swift */; };
+		38E317DB1D7A500400F33AE7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317D81D7A500400F33AE7 /* MainViewController.swift */; };
+		38E317E21D7A532700F33AE7 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317E11D7A532700F33AE7 /* BookService.swift */; };
+		38E317E31D7A532700F33AE7 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317E11D7A532700F33AE7 /* BookService.swift */; };
+		38E317E41D7A532700F33AE7 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317E11D7A532700F33AE7 /* BookService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +47,7 @@
 
 /* Begin PBXFileReference section */
 		38E3179C1D7A4F3400F33AE7 /* iBookWorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBookWorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		38E3179F1D7A4F3400F33AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38E317A11D7A4F3400F33AE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38E3179F1D7A4F3400F33AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = iBookWorm/AppDelegate.swift; sourceTree = "<group>"; };
 		38E317A41D7A4F3400F33AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38E317A71D7A4F3400F33AE7 /* iBookWorm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iBookWorm.xcdatamodel; sourceTree = "<group>"; };
 		38E317A91D7A4F3400F33AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +59,10 @@
 		38E317BE1D7A4F3400F33AE7 /* iBookWormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBookWormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E317C21D7A4F3400F33AE7 /* iBookWormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBookWormUITests.swift; sourceTree = "<group>"; };
 		38E317C41D7A4F3400F33AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E317D01D7A4FD300F33AE7 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		38E317D11D7A4FD300F33AE7 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		38E317D81D7A500400F33AE7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = iBookWorm/MainViewController.swift; sourceTree = "<group>"; };
+		38E317E11D7A532700F33AE7 /* BookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,11 @@
 		38E317931D7A4F3400F33AE7 = {
 			isa = PBXGroup;
 			children = (
+				38E317E01D7A502D00F33AE7 /* delegates */,
+				38E317DF1D7A502700F33AE7 /* services */,
+				38E317DE1D7A502100F33AE7 /* controllers */,
+				38E317DD1D7A501C00F33AE7 /* views */,
+				38E317DC1D7A501500F33AE7 /* models */,
 				38E3179E1D7A4F3400F33AE7 /* iBookWorm */,
 				38E317B61D7A4F3400F33AE7 /* iBookWormTests */,
 				38E317C11D7A4F3400F33AE7 /* iBookWormUITests */,
@@ -99,13 +118,8 @@
 		38E3179E1D7A4F3400F33AE7 /* iBookWorm */ = {
 			isa = PBXGroup;
 			children = (
-				38E3179F1D7A4F3400F33AE7 /* AppDelegate.swift */,
-				38E317A11D7A4F3400F33AE7 /* ViewController.swift */,
-				38E317A31D7A4F3400F33AE7 /* Main.storyboard */,
 				38E317A91D7A4F3400F33AE7 /* Assets.xcassets */,
-				38E317AB1D7A4F3400F33AE7 /* LaunchScreen.storyboard */,
 				38E317AE1D7A4F3400F33AE7 /* Info.plist */,
-				38E317A61D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld */,
 			);
 			path = iBookWorm;
 			sourceTree = "<group>";
@@ -126,6 +140,49 @@
 				38E317C41D7A4F3400F33AE7 /* Info.plist */,
 			);
 			path = iBookWormUITests;
+			sourceTree = "<group>";
+		};
+		38E317DC1D7A501500F33AE7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				38E317A61D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld */,
+				38E317D01D7A4FD300F33AE7 /* Book+CoreDataProperties.swift */,
+				38E317D11D7A4FD300F33AE7 /* Book.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		38E317DD1D7A501C00F33AE7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				38E317A31D7A4F3400F33AE7 /* Main.storyboard */,
+				38E317AB1D7A4F3400F33AE7 /* LaunchScreen.storyboard */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		38E317DE1D7A502100F33AE7 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				38E317D81D7A500400F33AE7 /* MainViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		38E317DF1D7A502700F33AE7 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				38E317E11D7A532700F33AE7 /* BookService.swift */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		38E317E01D7A502D00F33AE7 /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				38E3179F1D7A4F3400F33AE7 /* AppDelegate.swift */,
+			);
+			name = delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +319,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E317A21D7A4F3400F33AE7 /* ViewController.swift in Sources */,
 				38E317A01D7A4F3400F33AE7 /* AppDelegate.swift in Sources */,
+				38E317D21D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */,
+				38E317E21D7A532700F33AE7 /* BookService.swift in Sources */,
+				38E317D91D7A500400F33AE7 /* MainViewController.swift in Sources */,
+				38E317D51D7A4FD300F33AE7 /* Book.swift in Sources */,
 				38E317A81D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +332,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E317D31D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */,
+				38E317E31D7A532700F33AE7 /* BookService.swift in Sources */,
 				38E317B81D7A4F3400F33AE7 /* iBookWormTests.swift in Sources */,
+				38E317D61D7A4FD300F33AE7 /* Book.swift in Sources */,
+				38E317DA1D7A500400F33AE7 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E317D41D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */,
+				38E317E41D7A532700F33AE7 /* BookService.swift in Sources */,
 				38E317C31D7A4F3400F33AE7 /* iBookWormUITests.swift in Sources */,
+				38E317D71D7A4FD300F33AE7 /* Book.swift in Sources */,
+				38E317DB1D7A500400F33AE7 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +374,7 @@
 				38E317A41D7A4F3400F33AE7 /* Base */,
 			);
 			name = Main.storyboard;
+			path = iBookWorm;
 			sourceTree = "<group>";
 		};
 		38E317AB1D7A4F3400F33AE7 /* LaunchScreen.storyboard */ = {
@@ -314,6 +383,7 @@
 				38E317AC1D7A4F3400F33AE7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = iBookWorm;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -410,6 +480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.khanal.iBookWorm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -421,6 +492,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.khanal.iBookWorm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -515,7 +587,8 @@
 				38E317A71D7A4F3400F33AE7 /* iBookWorm.xcdatamodel */,
 			);
 			currentVersion = 38E317A71D7A4F3400F33AE7 /* iBookWorm.xcdatamodel */;
-			path = iBookWorm.xcdatamodeld;
+			name = iBookWorm.xcdatamodeld;
+			path = iBookWorm/iBookWorm.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
