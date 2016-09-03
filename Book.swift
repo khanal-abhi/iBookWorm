@@ -18,7 +18,7 @@ class Book: NSManagedObject {
 }
 
 struct BookHolder {
-    var id:Int;
+    var id:NSManagedObjectID;
     var title:String;
     var author:String;
     var genre:String;

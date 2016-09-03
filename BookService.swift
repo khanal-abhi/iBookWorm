@@ -87,7 +87,11 @@ class BookService {
         let author = jsonBook["author"] as! String;
         let genre = jsonBook["genre"] as! String;
         let year = jsonBook["year"] as! Int;
-        return BookHolder(id: -1, title: title, author: author, genre: genre, year: year);
+        return BookHolder(id: NSManagedObjectID(), title: title, author: author, genre: genre, year: year);
     }
     
+    static func bookToBookHolder(book:Book) -> BookHolder {
+        return BookHolder(id: book.objectID, title: book.title!, author: book.author!, genre: book.genre!, year: Int(book.year!));
+    }
+
 }

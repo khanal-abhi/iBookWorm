@@ -23,8 +23,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let context:NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext;
         bookService = BookService(context: context);
-        // Read Json File to make sure it is working
-        self.loadBooksFromJsonFile();
         
         // Check the books count in the database. If > 0 no need to load from
         self.checkForFirstRun();
@@ -58,6 +56,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if let _ = preferences.objectForKey(keyForHasBeenRunBefore) {
             // Has been run before
+            self.loadBooksFromDatabase();
             
         } else {
             // Has not been run before
@@ -114,7 +113,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         for bookHolder in bookHolders {
             books.append((bookService?.insert(bookHolder.title, author: bookHolder.author, genre: bookHolder.genre, year: bookHolder.year))!);
         }
+        bookService?.commit();
         tableView.reloadData();
         
+    }
+    
+    func loadBooksFromDatabase(){
+        if let books = bookService?.getAll() {
+            self.books = books;
+            tableView.reloadData();
+        }
     }
 }
