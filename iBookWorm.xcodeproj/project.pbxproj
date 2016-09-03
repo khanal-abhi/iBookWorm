@@ -33,6 +33,9 @@
 		38E317EC1D7A68BF00F33AE7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38E317EA1D7A68BF00F33AE7 /* README.md */; };
 		38E317ED1D7A68BF00F33AE7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38E317EA1D7A68BF00F33AE7 /* README.md */; };
 		38F0F39F1D7AE052006DCECB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0F39E1D7AE052006DCECB /* DetailViewController.swift */; };
+		38F44B9F1D7B017B005F9FEA /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F44B9E1D7B017B005F9FEA /* AddBookViewController.swift */; };
+		38F44BA01D7B017B005F9FEA /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F44B9E1D7B017B005F9FEA /* AddBookViewController.swift */; };
+		38F44BA11D7B017B005F9FEA /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F44B9E1D7B017B005F9FEA /* AddBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,7 @@
 		38E317E61D7A5B8300F33AE7 /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
 		38E317EA1D7A68BF00F33AE7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		38F0F39E1D7AE052006DCECB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		38F44B9E1D7B017B005F9FEA /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 			children = (
 				38E317D81D7A500400F33AE7 /* MainViewController.swift */,
 				38F0F39E1D7AE052006DCECB /* DetailViewController.swift */,
+				38F44B9E1D7B017B005F9FEA /* AddBookViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				38E317D91D7A500400F33AE7 /* MainViewController.swift in Sources */,
 				38E317D51D7A4FD300F33AE7 /* Book.swift in Sources */,
 				38E317A81D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld in Sources */,
+				38F44B9F1D7B017B005F9FEA /* AddBookViewController.swift in Sources */,
 				38F0F39F1D7AE052006DCECB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +367,7 @@
 				38E317EC1D7A68BF00F33AE7 /* README.md in Sources */,
 				38E317D31D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */,
 				38E317E31D7A532700F33AE7 /* BookService.swift in Sources */,
+				38F44BA01D7B017B005F9FEA /* AddBookViewController.swift in Sources */,
 				38E317B81D7A4F3400F33AE7 /* iBookWormTests.swift in Sources */,
 				38E317D61D7A4FD300F33AE7 /* Book.swift in Sources */,
 				38E317DA1D7A500400F33AE7 /* MainViewController.swift in Sources */,
@@ -374,6 +381,7 @@
 				38E317ED1D7A68BF00F33AE7 /* README.md in Sources */,
 				38E317D41D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */,
 				38E317E41D7A532700F33AE7 /* BookService.swift in Sources */,
+				38F44BA11D7B017B005F9FEA /* AddBookViewController.swift in Sources */,
 				38E317C31D7A4F3400F33AE7 /* iBookWormUITests.swift in Sources */,
 				38E317D71D7A4FD300F33AE7 /* Book.swift in Sources */,
 				38E317DB1D7A500400F33AE7 /* MainViewController.swift in Sources */,
