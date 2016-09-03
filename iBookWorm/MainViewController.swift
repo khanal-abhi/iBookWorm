@@ -26,6 +26,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let context:NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext;
         bookService = BookService(context: context);
         
+        // Async check for first run / file load
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
+            self.checkForFirstRun();
+        }
+        
         // Set up the default back button
         self.navigationItem.leftItemsSupplementBackButton = true;
         
@@ -35,8 +40,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Set up the title for table view
 //        self.tableView.h
         
-        // Check the books count in the database. If > 0 no need to load from
-        self.checkForFirstRun();
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,7 +72,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == bookDetailSegueIdentifier) {
             let detailViewController = segue.destinationViewController as! DetailViewController;
-            detailViewController.book? = currentBook!;
+            detailViewController.book = currentBook!;
         }
     }
     
@@ -135,14 +139,22 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             books.append((bookService?.insert(bookHolder.title, author: bookHolder.author, genre: bookHolder.genre, year: bookHolder.year))!);
         }
         bookService?.commit();
-        tableView.reloadData();
+        
+        // use main thread to load the data to the table view
+        dispatch_async(dispatch_get_main_queue()){
+            self.tableView.reloadData();
+        }
         
     }
     
     func loadBooksFromDatabase(){
         if let books = bookService?.getAll() {
             self.books = books;
-            tableView.reloadData();
+            
+            // use main thread to load the data to the table view
+            dispatch_async(dispatch_get_main_queue()){
+                self.tableView.reloadData();
+            }
         }
     }
 }

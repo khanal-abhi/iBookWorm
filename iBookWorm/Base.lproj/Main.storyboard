@@ -66,7 +66,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="gwE-In-Il6" id="h4F-Vk-3gd"/>
-                        <segue destination="zAB-Gj-Sau" kind="showDetail" identifier="BookDetailSegue" id="kta-Uh-uvy"/>
+                        <segue destination="zAB-Gj-Sau" kind="show" identifier="BookDetailSegue" action="showDetailViewController:sender:" id="kta-Uh-uvy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -84,8 +84,51 @@
                     <view key="view" contentMode="scaleToFill" id="Q7e-JE-6fQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VPx-oX-cbN">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMf-8t-Qd6">
+                                        <rect key="frame" x="248" y="0.0" width="65" height="134"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhb-jm-QaO">
+                                        <rect key="frame" x="241" y="134" width="78" height="134"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zo5-ho-5eu">
+                                        <rect key="frame" x="245" y="268" width="71" height="134"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Year of Publication:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cC8-aB-e0E">
+                                        <rect key="frame" x="190" y="402" width="181" height="134"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VPx-oX-cbN" firstAttribute="leading" secondItem="Q7e-JE-6fQ" secondAttribute="leadingMargin" id="9nS-Ce-fqF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VPx-oX-cbN" secondAttribute="trailing" id="HLW-Aa-HDU"/>
+                            <constraint firstItem="ynn-kR-BCN" firstAttribute="top" secondItem="VPx-oX-cbN" secondAttribute="bottom" id="hIs-UV-fYQ"/>
+                            <constraint firstItem="VPx-oX-cbN" firstAttribute="top" secondItem="n8e-gB-Zrx" secondAttribute="bottom" id="wLz-3K-Jnt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bookAuthor" destination="Fhb-jm-QaO" id="PyB-et-ENT"/>
+                        <outlet property="bookGenre" destination="Zo5-ho-5eu" id="aQD-6e-Xr6"/>
+                        <outlet property="bookTitle" destination="GMf-8t-Qd6" id="zy9-Qg-ozg"/>
+                        <outlet property="bookYear" destination="cC8-aB-e0E" id="bVQ-SR-L9R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpT-aN-dYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
