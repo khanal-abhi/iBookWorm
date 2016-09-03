@@ -21,7 +21,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        var context:NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext;
+        let context:NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext;
         bookService = BookService(context: context);
         // Read Json File to make sure it is working
         self.loadBooksFromJsonFile();

@@ -29,6 +29,9 @@
 		38E317E71D7A5B8300F33AE7 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E317E61D7A5B8300F33AE7 /* books.json */; };
 		38E317E81D7A5B8300F33AE7 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E317E61D7A5B8300F33AE7 /* books.json */; };
 		38E317E91D7A5B8300F33AE7 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E317E61D7A5B8300F33AE7 /* books.json */; };
+		38E317EB1D7A68BF00F33AE7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38E317EA1D7A68BF00F33AE7 /* README.md */; };
+		38E317EC1D7A68BF00F33AE7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38E317EA1D7A68BF00F33AE7 /* README.md */; };
+		38E317ED1D7A68BF00F33AE7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38E317EA1D7A68BF00F33AE7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,7 @@
 		38E317D81D7A500400F33AE7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = iBookWorm/MainViewController.swift; sourceTree = "<group>"; };
 		38E317E11D7A532700F33AE7 /* BookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
 		38E317E61D7A5B8300F33AE7 /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
+		38E317EA1D7A68BF00F33AE7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		38E317931D7A4F3400F33AE7 = {
 			isa = PBXGroup;
 			children = (
+				38E317EA1D7A68BF00F33AE7 /* README.md */,
 				38E317E51D7A5B6A00F33AE7 /* resources */,
 				38E317E01D7A502D00F33AE7 /* delegates */,
 				38E317DF1D7A502700F33AE7 /* services */,
@@ -338,6 +343,7 @@
 				38E317A01D7A4F3400F33AE7 /* AppDelegate.swift in Sources */,
 				38E317D21D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */,
 				38E317E21D7A532700F33AE7 /* BookService.swift in Sources */,
+				38E317EB1D7A68BF00F33AE7 /* README.md in Sources */,
 				38E317D91D7A500400F33AE7 /* MainViewController.swift in Sources */,
 				38E317D51D7A4FD300F33AE7 /* Book.swift in Sources */,
 				38E317A81D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld in Sources */,
@@ -348,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E317EC1D7A68BF00F33AE7 /* README.md in Sources */,
 				38E317D31D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */,
 				38E317E31D7A532700F33AE7 /* BookService.swift in Sources */,
 				38E317B81D7A4F3400F33AE7 /* iBookWormTests.swift in Sources */,
@@ -360,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E317ED1D7A68BF00F33AE7 /* README.md in Sources */,
 				38E317D41D7A4FD300F33AE7 /* Book+CoreDataProperties.swift in Sources */,
 				38E317E41D7A532700F33AE7 /* BookService.swift in Sources */,
 				38E317C31D7A4F3400F33AE7 /* iBookWormUITests.swift in Sources */,
