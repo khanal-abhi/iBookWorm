@@ -26,6 +26,9 @@
 		38E317E21D7A532700F33AE7 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317E11D7A532700F33AE7 /* BookService.swift */; };
 		38E317E31D7A532700F33AE7 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317E11D7A532700F33AE7 /* BookService.swift */; };
 		38E317E41D7A532700F33AE7 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317E11D7A532700F33AE7 /* BookService.swift */; };
+		38E317E71D7A5B8300F33AE7 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E317E61D7A5B8300F33AE7 /* books.json */; };
+		38E317E81D7A5B8300F33AE7 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E317E61D7A5B8300F33AE7 /* books.json */; };
+		38E317E91D7A5B8300F33AE7 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E317E61D7A5B8300F33AE7 /* books.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,7 @@
 		38E317D11D7A4FD300F33AE7 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		38E317D81D7A500400F33AE7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = iBookWorm/MainViewController.swift; sourceTree = "<group>"; };
 		38E317E11D7A532700F33AE7 /* BookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		38E317E61D7A5B8300F33AE7 /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		38E317931D7A4F3400F33AE7 = {
 			isa = PBXGroup;
 			children = (
+				38E317E51D7A5B6A00F33AE7 /* resources */,
 				38E317E01D7A502D00F33AE7 /* delegates */,
 				38E317DF1D7A502700F33AE7 /* services */,
 				38E317DE1D7A502100F33AE7 /* controllers */,
@@ -183,6 +188,14 @@
 				38E3179F1D7A4F3400F33AE7 /* AppDelegate.swift */,
 			);
 			name = delegates;
+			sourceTree = "<group>";
+		};
+		38E317E51D7A5B6A00F33AE7 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				38E317E61D7A5B8300F33AE7 /* books.json */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E317E71D7A5B8300F33AE7 /* books.json in Resources */,
 				38E317AD1D7A4F3400F33AE7 /* LaunchScreen.storyboard in Resources */,
 				38E317AA1D7A4F3400F33AE7 /* Assets.xcassets in Resources */,
 				38E317A51D7A4F3400F33AE7 /* Main.storyboard in Resources */,
@@ -302,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E317E81D7A5B8300F33AE7 /* books.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E317E91D7A5B8300F33AE7 /* books.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

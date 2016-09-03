@@ -62,6 +62,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TD6-A1-FPf"/>
+                    <connections>
+                        <outlet property="tableView" destination="gwE-In-Il6" id="h4F-Vk-3gd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

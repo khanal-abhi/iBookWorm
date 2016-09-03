@@ -82,4 +82,12 @@ class BookService {
         }
     }
     
+    static func jsonBookToBookHolder(jsonBook:AnyObject) -> BookHolder {
+        let title = jsonBook["title"]as! String;
+        let author = jsonBook["author"] as! String;
+        let genre = jsonBook["genre"] as! String;
+        let year = jsonBook["year"] as! Int;
+        return BookHolder(id: -1, title: title, author: author, genre: genre, year: year);
+    }
+    
 }
