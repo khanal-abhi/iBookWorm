@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38E317A01D7A4F3400F33AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3179F1D7A4F3400F33AE7 /* AppDelegate.swift */; };
+		38E317A21D7A4F3400F33AE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317A11D7A4F3400F33AE7 /* ViewController.swift */; };
+		38E317A51D7A4F3400F33AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E317A31D7A4F3400F33AE7 /* Main.storyboard */; };
+		38E317A81D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38E317A61D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld */; };
+		38E317AA1D7A4F3400F33AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E317A91D7A4F3400F33AE7 /* Assets.xcassets */; };
+		38E317AD1D7A4F3400F33AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E317AB1D7A4F3400F33AE7 /* LaunchScreen.storyboard */; };
+		38E317B81D7A4F3400F33AE7 /* iBookWormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317B71D7A4F3400F33AE7 /* iBookWormTests.swift */; };
+		38E317C31D7A4F3400F33AE7 /* iBookWormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E317C21D7A4F3400F33AE7 /* iBookWormUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38E317B41D7A4F3400F33AE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E317941D7A4F3400F33AE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38E3179B1D7A4F3400F33AE7;
+			remoteInfo = iBookWorm;
+		};
+		38E317BF1D7A4F3400F33AE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E317941D7A4F3400F33AE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38E3179B1D7A4F3400F33AE7;
+			remoteInfo = iBookWorm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38E3179C1D7A4F3400F33AE7 /* iBookWorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBookWorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E3179F1D7A4F3400F33AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38E317A11D7A4F3400F33AE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38E317A41D7A4F3400F33AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38E317A71D7A4F3400F33AE7 /* iBookWorm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iBookWorm.xcdatamodel; sourceTree = "<group>"; };
+		38E317A91D7A4F3400F33AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38E317AC1D7A4F3400F33AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38E317AE1D7A4F3400F33AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E317B31D7A4F3400F33AE7 /* iBookWormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBookWormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E317B71D7A4F3400F33AE7 /* iBookWormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBookWormTests.swift; sourceTree = "<group>"; };
+		38E317B91D7A4F3400F33AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E317BE1D7A4F3400F33AE7 /* iBookWormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBookWormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E317C21D7A4F3400F33AE7 /* iBookWormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBookWormUITests.swift; sourceTree = "<group>"; };
+		38E317C41D7A4F3400F33AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38E317991D7A4F3400F33AE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E317B01D7A4F3400F33AE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E317BB1D7A4F3400F33AE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38E317931D7A4F3400F33AE7 = {
+			isa = PBXGroup;
+			children = (
+				38E3179E1D7A4F3400F33AE7 /* iBookWorm */,
+				38E317B61D7A4F3400F33AE7 /* iBookWormTests */,
+				38E317C11D7A4F3400F33AE7 /* iBookWormUITests */,
+				38E3179D1D7A4F3400F33AE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38E3179D1D7A4F3400F33AE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38E3179C1D7A4F3400F33AE7 /* iBookWorm.app */,
+				38E317B31D7A4F3400F33AE7 /* iBookWormTests.xctest */,
+				38E317BE1D7A4F3400F33AE7 /* iBookWormUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38E3179E1D7A4F3400F33AE7 /* iBookWorm */ = {
+			isa = PBXGroup;
+			children = (
+				38E3179F1D7A4F3400F33AE7 /* AppDelegate.swift */,
+				38E317A11D7A4F3400F33AE7 /* ViewController.swift */,
+				38E317A31D7A4F3400F33AE7 /* Main.storyboard */,
+				38E317A91D7A4F3400F33AE7 /* Assets.xcassets */,
+				38E317AB1D7A4F3400F33AE7 /* LaunchScreen.storyboard */,
+				38E317AE1D7A4F3400F33AE7 /* Info.plist */,
+				38E317A61D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld */,
+			);
+			path = iBookWorm;
+			sourceTree = "<group>";
+		};
+		38E317B61D7A4F3400F33AE7 /* iBookWormTests */ = {
+			isa = PBXGroup;
+			children = (
+				38E317B71D7A4F3400F33AE7 /* iBookWormTests.swift */,
+				38E317B91D7A4F3400F33AE7 /* Info.plist */,
+			);
+			path = iBookWormTests;
+			sourceTree = "<group>";
+		};
+		38E317C11D7A4F3400F33AE7 /* iBookWormUITests */ = {
+			isa = PBXGroup;
+			children = (
+				38E317C21D7A4F3400F33AE7 /* iBookWormUITests.swift */,
+				38E317C41D7A4F3400F33AE7 /* Info.plist */,
+			);
+			path = iBookWormUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38E3179B1D7A4F3400F33AE7 /* iBookWorm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E317C71D7A4F3400F33AE7 /* Build configuration list for PBXNativeTarget "iBookWorm" */;
+			buildPhases = (
+				38E317981D7A4F3400F33AE7 /* Sources */,
+				38E317991D7A4F3400F33AE7 /* Frameworks */,
+				38E3179A1D7A4F3400F33AE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iBookWorm;
+			productName = iBookWorm;
+			productReference = 38E3179C1D7A4F3400F33AE7 /* iBookWorm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38E317B21D7A4F3400F33AE7 /* iBookWormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E317CA1D7A4F3400F33AE7 /* Build configuration list for PBXNativeTarget "iBookWormTests" */;
+			buildPhases = (
+				38E317AF1D7A4F3400F33AE7 /* Sources */,
+				38E317B01D7A4F3400F33AE7 /* Frameworks */,
+				38E317B11D7A4F3400F33AE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38E317B51D7A4F3400F33AE7 /* PBXTargetDependency */,
+			);
+			name = iBookWormTests;
+			productName = iBookWormTests;
+			productReference = 38E317B31D7A4F3400F33AE7 /* iBookWormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		38E317BD1D7A4F3400F33AE7 /* iBookWormUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E317CD1D7A4F3400F33AE7 /* Build configuration list for PBXNativeTarget "iBookWormUITests" */;
+			buildPhases = (
+				38E317BA1D7A4F3400F33AE7 /* Sources */,
+				38E317BB1D7A4F3400F33AE7 /* Frameworks */,
+				38E317BC1D7A4F3400F33AE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38E317C01D7A4F3400F33AE7 /* PBXTargetDependency */,
+			);
+			name = iBookWormUITests;
+			productName = iBookWormUITests;
+			productReference = 38E317BE1D7A4F3400F33AE7 /* iBookWormUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38E317941D7A4F3400F33AE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = KHANALCO;
+				TargetAttributes = {
+					38E3179B1D7A4F3400F33AE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8KZNR62J66;
+					};
+					38E317B21D7A4F3400F33AE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8KZNR62J66;
+						TestTargetID = 38E3179B1D7A4F3400F33AE7;
+					};
+					38E317BD1D7A4F3400F33AE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8KZNR62J66;
+						TestTargetID = 38E3179B1D7A4F3400F33AE7;
+					};
+				};
+			};
+			buildConfigurationList = 38E317971D7A4F3400F33AE7 /* Build configuration list for PBXProject "iBookWorm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38E317931D7A4F3400F33AE7;
+			productRefGroup = 38E3179D1D7A4F3400F33AE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38E3179B1D7A4F3400F33AE7 /* iBookWorm */,
+				38E317B21D7A4F3400F33AE7 /* iBookWormTests */,
+				38E317BD1D7A4F3400F33AE7 /* iBookWormUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38E3179A1D7A4F3400F33AE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E317AD1D7A4F3400F33AE7 /* LaunchScreen.storyboard in Resources */,
+				38E317AA1D7A4F3400F33AE7 /* Assets.xcassets in Resources */,
+				38E317A51D7A4F3400F33AE7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E317B11D7A4F3400F33AE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E317BC1D7A4F3400F33AE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38E317981D7A4F3400F33AE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E317A21D7A4F3400F33AE7 /* ViewController.swift in Sources */,
+				38E317A01D7A4F3400F33AE7 /* AppDelegate.swift in Sources */,
+				38E317A81D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E317AF1D7A4F3400F33AE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E317B81D7A4F3400F33AE7 /* iBookWormTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E317BA1D7A4F3400F33AE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E317C31D7A4F3400F33AE7 /* iBookWormUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38E317B51D7A4F3400F33AE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38E3179B1D7A4F3400F33AE7 /* iBookWorm */;
+			targetProxy = 38E317B41D7A4F3400F33AE7 /* PBXContainerItemProxy */;
+		};
+		38E317C01D7A4F3400F33AE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38E3179B1D7A4F3400F33AE7 /* iBookWorm */;
+			targetProxy = 38E317BF1D7A4F3400F33AE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38E317A31D7A4F3400F33AE7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E317A41D7A4F3400F33AE7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38E317AB1D7A4F3400F33AE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E317AC1D7A4F3400F33AE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38E317C51D7A4F3400F33AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38E317C61D7A4F3400F33AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38E317C81D7A4F3400F33AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iBookWorm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.khanal.iBookWorm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		38E317C91D7A4F3400F33AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iBookWorm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.khanal.iBookWorm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		38E317CB1D7A4F3400F33AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = iBookWormTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.khanal.iBookWormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iBookWorm.app/iBookWorm";
+			};
+			name = Debug;
+		};
+		38E317CC1D7A4F3400F33AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = iBookWormTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.khanal.iBookWormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iBookWorm.app/iBookWorm";
+			};
+			name = Release;
+		};
+		38E317CE1D7A4F3400F33AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = iBookWormUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.khanal.iBookWormUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = iBookWorm;
+			};
+			name = Debug;
+		};
+		38E317CF1D7A4F3400F33AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = iBookWormUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.khanal.iBookWormUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = iBookWorm;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38E317971D7A4F3400F33AE7 /* Build configuration list for PBXProject "iBookWorm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E317C51D7A4F3400F33AE7 /* Debug */,
+				38E317C61D7A4F3400F33AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38E317C71D7A4F3400F33AE7 /* Build configuration list for PBXNativeTarget "iBookWorm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E317C81D7A4F3400F33AE7 /* Debug */,
+				38E317C91D7A4F3400F33AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38E317CA1D7A4F3400F33AE7 /* Build configuration list for PBXNativeTarget "iBookWormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E317CB1D7A4F3400F33AE7 /* Debug */,
+				38E317CC1D7A4F3400F33AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38E317CD1D7A4F3400F33AE7 /* Build configuration list for PBXNativeTarget "iBookWormUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E317CE1D7A4F3400F33AE7 /* Debug */,
+				38E317CF1D7A4F3400F33AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		38E317A61D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38E317A71D7A4F3400F33AE7 /* iBookWorm.xcdatamodel */,
+			);
+			currentVersion = 38E317A71D7A4F3400F33AE7 /* iBookWorm.xcdatamodel */;
+			path = iBookWorm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 38E317941D7A4F3400F33AE7 /* Project object */;
+}
