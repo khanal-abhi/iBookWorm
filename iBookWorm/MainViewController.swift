@@ -15,14 +15,25 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     let cellIdentifier = "BookViewCell";
     var books: [Book] = [];
     var bookService:BookService?;
+    var currentBook:Book?;
+    
+    let bookDetailSegueIdentifier = "BookDetailSegue";
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        
         let context:NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext;
         bookService = BookService(context: context);
+        
+        // Set up the default back button
+        self.navigationItem.leftItemsSupplementBackButton = true;
+        
+        // Set up the title for the navigation bar
+        self.navigationItem.title = "iBookWorm";
+        
+        // Set up the title for table view
+//        self.tableView.h
         
         // Check the books count in the database. If > 0 no need to load from
         self.checkForFirstRun();
@@ -49,6 +60,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        self.currentBook = books[indexPath.row];
+        self.performSegueWithIdentifier(bookDetailSegueIdentifier, sender: self);
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == bookDetailSegueIdentifier) {
+            let detailViewController = segue.destinationViewController as! DetailViewController;
+            detailViewController.book? = currentBook!;
+        }
     }
     
     func checkForFirstRun(){

@@ -32,6 +32,7 @@
 		38E317EB1D7A68BF00F33AE7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38E317EA1D7A68BF00F33AE7 /* README.md */; };
 		38E317EC1D7A68BF00F33AE7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38E317EA1D7A68BF00F33AE7 /* README.md */; };
 		38E317ED1D7A68BF00F33AE7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 38E317EA1D7A68BF00F33AE7 /* README.md */; };
+		38F0F39F1D7AE052006DCECB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F0F39E1D7AE052006DCECB /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		38E317E11D7A532700F33AE7 /* BookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
 		38E317E61D7A5B8300F33AE7 /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
 		38E317EA1D7A68BF00F33AE7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		38F0F39E1D7AE052006DCECB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				38E317D81D7A500400F33AE7 /* MainViewController.swift */,
+				38F0F39E1D7AE052006DCECB /* DetailViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				38E317D91D7A500400F33AE7 /* MainViewController.swift in Sources */,
 				38E317D51D7A4FD300F33AE7 /* Book.swift in Sources */,
 				38E317A81D7A4F3400F33AE7 /* iBookWorm.xcdatamodeld in Sources */,
+				38F0F39F1D7AE052006DCECB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +589,7 @@
 				38E317C91D7A4F3400F33AE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38E317CA1D7A4F3400F33AE7 /* Build configuration list for PBXNativeTarget "iBookWormTests" */ = {
 			isa = XCConfigurationList;
@@ -593,6 +598,7 @@
 				38E317CC1D7A4F3400F33AE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38E317CD1D7A4F3400F33AE7 /* Build configuration list for PBXNativeTarget "iBookWormUITests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +607,7 @@
 				38E317CF1D7A4F3400F33AE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

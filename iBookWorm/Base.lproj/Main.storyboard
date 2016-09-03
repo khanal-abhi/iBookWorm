@@ -61,14 +61,35 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gwE-In-Il6" secondAttribute="trailing" id="zmc-xw-OXX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="TD6-A1-FPf"/>
+                    <navigationItem key="navigationItem" id="TD6-A1-FPf">
+                        <barButtonItem key="rightBarButtonItem" title="Add Book &gt;" id="RRY-4a-mHd"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="gwE-In-Il6" id="h4F-Vk-3gd"/>
+                        <segue destination="zAB-Gj-Sau" kind="showDetail" identifier="BookDetailSegue" id="kta-Uh-uvy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1137" y="399"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Egx-Ex-Qec">
+            <objects>
+                <viewController id="zAB-Gj-Sau" customClass="DetailViewController" customModule="iBookWorm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n8e-gB-Zrx"/>
+                        <viewControllerLayoutGuide type="bottom" id="ynn-kR-BCN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q7e-JE-6fQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpT-aN-dYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="407"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yDm-ar-3A7">
