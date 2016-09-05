@@ -36,4 +36,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    @IBAction func editBookClicked(sender: AnyObject) {
+        
+    }
 }
