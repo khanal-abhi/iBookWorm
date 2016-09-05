@@ -14,6 +14,8 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var bookAuthor: UITextField!
     @IBOutlet weak var bookGenre: UITextField!
     @IBOutlet weak var bookYear: UITextField!
+    
+    let mainViewControllerIdentifier = "MainViewController";
    
     var validEntries:[String:Bool] = [:];
     override func viewDidLoad() {
@@ -142,26 +144,14 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
             
             let bookService = BookService(context: (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext);
             
-            let book = bookService.insert(bookTitle.text!, author: bookAuthor.text!, genre: bookGenre.text!, year: Int(bookYear.text!)!);
+            bookService.insert(bookTitle.text!, author: bookAuthor.text!, genre: bookGenre.text!, year: Int(bookYear.text!)!);
             
             // saved the context but in a backgroud thread for smooth UI.
             dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
                 bookService.commit();
             }
             
-            
-            
-            let okAction = UIAlertAction(title: "Ok", style: .Default, handler: {(action) -> Void in
-                self.dismissViewControllerAnimated(true){
-                    
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                }
-            });
-            
-            let okViewController = UIAlertController(title: "Book Saved", message: "The book \(book.title!) has been saved successfully!", preferredStyle: .Alert);
-            okViewController.addAction(okAction);
-            self.presentViewController(okViewController, animated: true, completion: nil);
-            
+            self.navigationController?.popToRootViewControllerAnimated(true);
         }
 
     }
