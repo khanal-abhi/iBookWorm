@@ -19,6 +19,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let bookDetailSegueIdentifier = "BookDetailSegue";
     let detailViewControllerIdentifier = "DetailViewController";
+    let addBookViewCOntrollerIdentifier = "AddBookViewController";
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -159,5 +160,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.tableView.reloadData();
             }
         }
+    }
+    @IBAction func addBookClicked(sender: AnyObject) {
+        
+        let addBookViewController = self.storyboard?.instantiateViewControllerWithIdentifier(self.addBookViewCOntrollerIdentifier) as! AddBookViewController;
+        
+        self.navigationController?.pushViewController(addBookViewController, animated: true);
     }
 }

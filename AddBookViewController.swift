@@ -8,14 +8,13 @@
 
 import UIKit
 
-class AddBookViewController: UIViewController, UITextViewDelegate {
+class AddBookViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var bookTitle:UITextView!;
-    @IBOutlet weak var bookAuthor:UITextView!;
-    @IBOutlet weak var bookGenere:UITextView!;
-    @IBOutlet weak var bookYear:UITextView!;
-    
-    var bookService:BookService?;
+    @IBOutlet weak var bookTitle: UITextField!
+    @IBOutlet weak var bookAuthor: UITextField!
+    @IBOutlet weak var bookGenre: UITextField!
+    @IBOutlet weak var bookYear: UITextField!
+   
     var validEntries:[String:Bool] = [:];
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -26,43 +25,43 @@ class AddBookViewController: UIViewController, UITextViewDelegate {
         self.initializeValidationDictionary();
     }
     
-    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    func textField(textField: UITextField, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
 
         let length = NSString(string: text).length;
         
-        if(textView == self.bookTitle){
+        if(textField == self.bookTitle){
             if length > 0 {
-                textView.textColor = UIColor.greenColor();
+                textField.textColor = UIColor.greenColor();
                 self.validEntries["title"] = true;
             } else {
-                textView.textColor = UIColor.redColor();
+                textField.textColor = UIColor.redColor();
                 self.validEntries["title"] = false;
             }
             
-        } else if (textView == self.bookAuthor) {
+        } else if (textField == self.bookAuthor) {
             if length > 0 {
-                textView.textColor = UIColor.greenColor();
+                textField.textColor = UIColor.greenColor();
                 self.validEntries["author"] = true;
             } else {
-                textView.textColor = UIColor.redColor();
+                textField.textColor = UIColor.redColor();
                 self.validEntries["author"] = false;
             }
             
-        } else if (textView == self.bookGenere) {
+        } else if (textField == self.bookGenre) {
             if length > 0 {
-                textView.textColor = UIColor.greenColor();
+                textField.textColor = UIColor.greenColor();
                 self.validEntries["genre"] = true;
             } else {
-                textView.textColor = UIColor.redColor();
+                textField.textColor = UIColor.redColor();
                 self.validEntries["genre"] = false;
             }
             
-        } else if (textView == self.bookYear) {
+        } else if (textField == self.bookYear) {
             if length > 0 && length < 4 && Int(text)! <= 9999 {
                 self.validEntries["year"] = true;
-                textView.textColor = UIColor.greenColor();
+                textField.textColor = UIColor.greenColor();
             } else {
-                textView.textColor = UIColor.redColor();
+                textField.textColor = UIColor.redColor();
                 self.validEntries["year"] = false;
             }
         }
@@ -73,7 +72,7 @@ class AddBookViewController: UIViewController, UITextViewDelegate {
     func setupTextViewDelegates(){
         self.bookTitle.delegate = self;
         self.bookAuthor.delegate = self;
-        self.bookGenere.delegate = self;
+        self.bookGenre.delegate = self;
         self.bookYear.delegate = self;
     }
     
@@ -105,5 +104,17 @@ class AddBookViewController: UIViewController, UITextViewDelegate {
         }
         
         return result;
+    }
+    
+    func setDelegates() {
+        bookTitle.delegate = self;
+        bookAuthor.delegate = self;
+        bookGenre.delegate = self;
+        bookYear.delegate = self;
+    }
+    
+    @IBAction func saveClicked(sender: AnyObject) {
+        self.validForSaving();
+
     }
 }
