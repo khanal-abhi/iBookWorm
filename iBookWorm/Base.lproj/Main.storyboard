@@ -88,13 +88,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dv1-K8-YdP">
-                                <rect key="frame" x="283" y="550" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveClicked:" destination="w8a-kb-FYw" eventType="touchUpInside" id="G8R-OF-r8v"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0o-IU-pAy">
                                 <rect key="frame" x="20" y="20" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -131,7 +124,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gr0-pI-cCk">
                                 <rect key="frame" x="20" y="250" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Of Publication:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llC-1a-yMZ">
                                 <rect key="frame" x="20" y="221" width="151" height="21"/>
@@ -139,6 +132,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dv1-K8-YdP">
+                                <rect key="frame" x="283" y="288" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveClicked:" destination="w8a-kb-FYw" eventType="touchUpInside" id="G8R-OF-r8v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -161,10 +161,16 @@
                             <constraint firstItem="6mM-bx-Vnt" firstAttribute="leading" secondItem="xmN-kA-lgf" secondAttribute="leadingMargin" id="jWb-yD-y21"/>
                             <constraint firstItem="1tN-X5-xlf" firstAttribute="top" secondItem="Jr0-2O-XwI" secondAttribute="bottom" constant="8" id="lSP-zp-2AX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1tN-X5-xlf" secondAttribute="trailing" id="r9r-Kf-5v7"/>
+                            <constraint firstItem="Dv1-K8-YdP" firstAttribute="top" secondItem="Gr0-pI-cCk" secondAttribute="bottom" constant="8" id="rRd-mt-80Q"/>
                             <constraint firstItem="o1f-YX-6It" firstAttribute="top" secondItem="6mM-bx-Vnt" secondAttribute="bottom" constant="8" id="uzD-B2-R7I"/>
                             <constraint firstItem="Mor-WY-1Iy" firstAttribute="top" secondItem="Dv1-K8-YdP" secondAttribute="bottom" constant="20" id="wTW-w9-qw0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o1f-YX-6It" secondAttribute="trailing" id="yQx-dM-u1Z"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wTW-w9-qw0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bookAuthor" destination="1tN-X5-xlf" id="0ZW-8C-ute"/>

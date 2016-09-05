@@ -23,11 +23,18 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
         
         // Initialize the validation check dictionary
         self.initializeValidationDictionary();
+        self.setDelegates();
     }
-    
-    func textField(textField: UITextField, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
 
-        let length = NSString(string: text).length;
+    func validateTextField(textField:UITextField) throws {
+        
+        guard let text = textField.text else {
+            throw NSError(domain: "Nil textfield error!", code: -1, userInfo: nil);
+        }
+        
+        let trimmedString = NSString(string: text).stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: " "));
+        
+        let length = NSString(string: trimmedString).length;
         
         if(textField == self.bookTitle){
             if length > 0 {
@@ -57,7 +64,14 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
             }
             
         } else if (textField == self.bookYear) {
-            if length > 0 && length < 4 && Int(text)! <= 9999 {
+            guard let _ = Int(text) else {
+                self.validEntries["year"] = false;
+                return;
+            }
+            
+            let sweetLength = length > 0 && length < 5;
+            
+            if sweetLength {
                 self.validEntries["year"] = true;
                 textField.textColor = UIColor.greenColor();
             } else {
@@ -65,8 +79,8 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
                 self.validEntries["year"] = false;
             }
         }
+
         
-        return true;
     }
     
     func setupTextViewDelegates(){
@@ -87,6 +101,17 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
     func validForSaving() -> Bool {
         var result = true;
         
+        do {
+            try self.validateTextField(self.bookTitle);
+            try self.validateTextField(self.bookAuthor);
+            try self.validateTextField(self.bookGenre);
+            try self.validateTextField(self.bookYear);
+            
+        } catch let error as NSError {
+            print(error);
+        }
+        
+        
         for (attribute , valid) in self.validEntries {
             
             if(!valid) {
@@ -98,6 +123,7 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
                 alert.title = "Invalid Entry!";
                 alert.message = "Please fix the error in \(attribute)";
                 alert.addButtonWithTitle("Ok");
+                alert.show();
                 
                 return result;
             }
@@ -113,7 +139,12 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
         bookYear.delegate = self;
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return self.validForSaving();
+    }
+    
     @IBAction func saveClicked(sender: AnyObject) {
+        
         self.validForSaving();
 
     }
