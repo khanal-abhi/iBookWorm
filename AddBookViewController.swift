@@ -116,15 +116,12 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
             
             if(!valid) {
                 result = false;
-                let okAction = UIAlertAction(title: "Invalid entry!", style: .Default, handler: {(action) -> Void in
+                let okAction = UIAlertAction(title: "Ok", style: .Default, handler: {(action) -> Void in
                     self.dismissViewControllerAnimated(true, completion: nil);
                 });
-                let alert = UIAlertView();
-                alert.title = "Invalid Entry!";
-                alert.message = "Please fix the error in \(attribute)";
-                alert.addButtonWithTitle("Ok");
-                alert.show();
-                
+                let alert = UIAlertController(title: "Invalid Entry!", message: "Please fix the errors is \(attribute) and try again!", preferredStyle: .Alert);
+                alert.addAction(okAction);
+                self.presentViewController(alert, animated: true, completion: nil);
                 return result;
             }
         }
@@ -139,13 +136,32 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
         bookYear.delegate = self;
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        return self.validForSaving();
-    }
-    
     @IBAction func saveClicked(sender: AnyObject) {
-        
-        self.validForSaving();
+        if(self.validForSaving()) {
+            // Ready to save it and dismiss self
+            
+            let bookService = BookService(context: (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext);
+            
+            let book = bookService.insert(bookTitle.text!, author: bookAuthor.text!, genre: bookGenre.text!, year: Int(bookYear.text!)!);
+            
+            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
+                bookService.commit();
+            }
+            
+            
+            
+            let okAction = UIAlertAction(title: "Ok", style: .Default, handler: {(action) -> Void in
+                self.dismissViewControllerAnimated(true){
+                    
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+            });
+            
+            let okViewController = UIAlertController(title: "Book Saved", message: "The book \(book.title!) has been saved successfully!", preferredStyle: .Alert);
+            okViewController.addAction(okAction);
+            self.presentViewController(okViewController, animated: true, completion: nil);
+            
+        }
 
     }
 }

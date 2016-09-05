@@ -73,12 +73,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.pushViewController(detailViewController, animated: true);
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if(segue.identifier == bookDetailSegueIdentifier) {
-//            let detailViewController = segue.destinationViewController as! DetailViewController;
-//            detailViewController.book = currentBook!;
-//        }
-//    }
+    override func viewWillAppear(animated: Bool) {
+        self.loadBooksFromDatabase();
+    }
     
     func checkForFirstRun(){
         let preferences = NSUserDefaults.standardUserDefaults();
