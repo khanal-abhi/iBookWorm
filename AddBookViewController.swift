@@ -144,6 +144,7 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
             
             let book = bookService.insert(bookTitle.text!, author: bookAuthor.text!, genre: bookGenre.text!, year: Int(bookYear.text!)!);
             
+            // saved the context but in a backgroud thread for smooth UI.
             dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
                 bookService.commit();
             }

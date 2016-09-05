@@ -158,6 +158,37 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true;
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let book = self.books[indexPath.row];
+        
+        if editingStyle == .Delete {
+            // Remove from the array (for instant view change)
+            self.books.removeAtIndex(indexPath.row);
+            
+            // Remove from the database (for persistence)
+            
+            self.bookService?.delete(book);
+                        
+            // Remove with animation (for aesthetics)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade);
+            
+            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
+                self.bookService?.commit();
+            }
+            
+        } else if editingStyle == .Insert {
+            let addBookViewController = self.storyboard?.instantiateViewControllerWithIdentifier(self.addBookViewCOntrollerIdentifier) as! AddBookViewController;
+            
+            self.navigationController?.pushViewController(addBookViewController, animated: true);
+        }
+    }
+    
     @IBAction func addBookClicked(sender: AnyObject) {
         
         let addBookViewController = self.storyboard?.instantiateViewControllerWithIdentifier(self.addBookViewCOntrollerIdentifier) as! AddBookViewController;
